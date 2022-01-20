@@ -2,8 +2,6 @@
 
 This is a test project to create REST API with Laravel Passport.
 
-**Note:** I use Laravel Passport, because I have some issues with [JWT](https://github.com/tymondesigns/jwt-auth) during the installation on Laravel 8.75 and PHP 8.0. I have not given up and I will try to drive it again :)
-
 ## About the Project
 
 **Note:** Added an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
@@ -101,7 +99,7 @@ Endpoints:
 
 #### *Update the specified resource in storage*
 
-Note: Note: If we using `Faker`, then we use `Illuminate\Http\Request`
+Note: If we using `Faker`, then we use `Illuminate\Http\Request`
 
 URL Parameters:
 
@@ -172,21 +170,3 @@ URL Parameters:
 Endpoints:
 
 - `DELETE api/v1/books/{id}`
-
-<br>
-<br>
-
-# MartinNestorov
-
-## Laravel Project
-
-1. Users are connected to an account (account has multiple users)
-2. Login page, application can be accessed only by logged users
-3. A page with a form to add a book (title, author, release date), the insert must be unique by author and title. Inserted book belongs to user account.
-4. A page where user can list (only) books added by his account in a table. In table must be a column with “Delete” button, to delete a book - delete action is accessible only first 2 days after book was inserted. 
-5. API endpoint used by an account to fetch his books. (/api/books)
-6. API endpoint to get information of a specific book by id (/api/books/1)
-7. API endpoints must be secured by JWT token, every account has a secret key for API
-8. Seeder to create demo accounts, users, books
-
-**Requirements:** Laravel Policies, Middlewares, Input Validations, Code Style PSR-5
