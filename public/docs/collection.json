@@ -1,0 +1,21 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/bookstore.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "81d15e11-e47c-4a47-9377-2618a067ac85",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [],
+    "auth": {
+        "type": "bearer"
+    }
+}
