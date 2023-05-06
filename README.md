@@ -5,6 +5,19 @@
 
 This is a test project to create REST API with Laravel Passport.
 
+## Task Definition
+
+- Users are connected to an account (account has multiple users)
+- Login page, application can be accessed only by logged users
+- A page with a form to add a book (title, author, release date), the insert must be unique by author and title. Inserted book belongs to user account.
+- A page where user can list (only) books added by his account in a table. In table must be a column with “Delete” button, to delete a book - delete action is accessible only first 2 days after book was inserted.
+- API endpoint used by an account to fetch his books. (/api/books)
+- API endpoint to get information of a specific book by id (/api/books/1)
+- API endpoints must be secured by JWT token, every account has a secret key for API
+- Seeder to create demo accounts, users, books
+
+**Requirements:** Laravel Policies, Middlewares, Input Validations, Code Style PSR-5
+
 ## About the Project
 
 **Note:** Added an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
