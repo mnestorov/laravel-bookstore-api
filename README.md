@@ -3,6 +3,8 @@
 
 # Laravel Bookstore API
 
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 This is a test project to create REST API with Laravel Passport.
 
 ## Task Definition
@@ -20,13 +22,13 @@ This is a test project to create REST API with Laravel Passport.
 
 ## About the Project
 
-**Note:** Added an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
+Added an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
 
 For the books and authors listings we will show only 5 results per page, so we have a pagination. To view a second page of the listings above, we'll use `{{base_url}}/api/v1/books?page=2`. 
 
 Also, on the listings for the books, the *description* is not visible. The *description* of the books we'll show only on the single listing. And for the last, every book can have more than one author, so the authors of the book we'll be shown comma separated, one after another.
 
-**Important:** After setup the project on your local environment, use the database seeder to create the first user. After that you can use the generated token for authorization.
+**Note:** After setup the project on your local environment, use the database seeder to create the first user. After that you can use the generated token for authorization.
 
 For more info about how to test the API, after setup the project, please check the documentation at: 
 - `{{base_url}}/docs/#authenticating-requests`
@@ -186,3 +188,9 @@ URL Parameters:
 Endpoints:
 
 - `DELETE api/v1/books/{id}`
+
+---
+
+## License
+
+This repository is [unlicense](https://choosealicense.com/licenses/unlicense/)[d], so feel free to fork!
