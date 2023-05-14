@@ -1,11 +1,23 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-
 # Laravel Bookstore API
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+
+## Overview
 
 This is a test project to create REST API with Laravel Passport.
+
+There is an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
+
+For the books and authors listings we will show only 5 results per page, so we have a pagination. To view a second page of the listings above, we'll use `{{base_url}}/api/v1/books?page=2`. 
+
+Also, on the listings for the books, the *description* is not visible. The *description* of the books we'll show only on the single listing. And for the last, every book can have more than one author, so the authors of the book we'll be shown comma separated, one after another.
+
+**Note:** After setup the project on your local environment, use the database seeder to create the first user. After that you can use the generated token for authorization.
+
+For more info about how to test the API, after setup the project, please check the documentation at: 
+- `{{base_url}}/docs/#authenticating-requests`
 
 ## Task Definition
 
@@ -19,19 +31,6 @@ This is a test project to create REST API with Laravel Passport.
 - Seeder to create demo accounts, users, books
 
 **Requirements:** Laravel Policies, Middlewares, Input Validations, Code Style PSR-5
-
-## About the Project
-
-Added an relationship between `Users` and `Books`. So, each user adds books, and in the listing for the users a list of all books added by the respective user is displayed. There is a new *added_by* attribute in the books listing, which shows which user the book was added by. Also, еvery user can only delete the books he has added.
-
-For the books and authors listings we will show only 5 results per page, so we have a pagination. To view a second page of the listings above, we'll use `{{base_url}}/api/v1/books?page=2`. 
-
-Also, on the listings for the books, the *description* is not visible. The *description* of the books we'll show only on the single listing. And for the last, every book can have more than one author, so the authors of the book we'll be shown comma separated, one after another.
-
-**Note:** After setup the project on your local environment, use the database seeder to create the first user. After that you can use the generated token for authorization.
-
-For more info about how to test the API, after setup the project, please check the documentation at: 
-- `{{base_url}}/docs/#authenticating-requests`
 
 ## Used Packages
 
@@ -189,8 +188,32 @@ Endpoints:
 
 - `DELETE api/v1/books/{id}`
 
+## How To Run
+
+- Clone the repository to your local machine and navigate to the project's root directory in a terminal.
+- Copy the `.env.example` file and name it `.env`.
+- Update the `.env` file with the appropriate database credentials and settings.
+- Run `composer install` to install all the required dependencies.
+- Generate an application key by running `php artisan key:generate`.
+- Run database migrations by running `php artisan migrate`.
+- Run the Laravel server by running `php artisan serve`.
+
+## About Laravel
+
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
 ---
 
 ## License
 
-This repository is [unlicense](https://choosealicense.com/licenses/unlicense/)[d], so feel free to fork!
+This project is released under the MIT License.
